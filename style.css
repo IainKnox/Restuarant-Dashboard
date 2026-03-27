@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&family=Courgette&family=Roboto:wght@100;300;400&family=Montserrat:wght@300;400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    scroll-behavior: smooth;
+
+}
+
+/* Header Section */
+
+.site-header {
+    font-family: 'Comfortaa', sans-serif;
+    padding: 0.5rem;
+    margin: 0;
+    text-align: left;
+    background-color: #f8f8f8;
+}
+
+.site-header {
+    font-size: 1.5rem;
+    color: black;
+}
+
+.site-header p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Footer Section */
+
+.site-footer {
+    min-height: 8rem;
+}
+
+.site-footer p{
+    font-family: 'Comfortaa', sans-serif;
+    font-size: .8rem;
+    padding: .25rem;
+    text-align: center;
+    background-color: #f8f8f8;
+    color: #555;
+}
