@@ -17,11 +17,13 @@
     margin: 0;
     text-align: left;
     background-color: #f8f8f8;
+    max-height: 200px;
+    max-width: auto;
 }
 
 .header-icon {
     color: #555;
-    margin: 40px 0;
+    font-size: 2rem;
 }
 
 .header-title {
@@ -31,6 +33,23 @@
 
 .header-title p {
     font-size: 1.2rem;
+    color: #555;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: #f8f8f8;
+    padding: 1rem;
+    height: 100vh;
+    top: 0;
+    left: 0;;
+}
+
+.sidebar li {
+    font-size: 1.2rem;
+    list-style: none;
+    padding: 0.5rem 0;
+    font-family: 'Comfortaa', sans-serif;
     color: #555;
 }
 
