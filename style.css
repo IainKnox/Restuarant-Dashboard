@@ -19,15 +19,21 @@
     background-color: #f8f8f8;
 }
 
-.site-header {
+.header-icon {
+    color: #555;
+    margin: 40px 0;
+}
+
+.header-title {
     font-size: 1.5rem;
     color: black;
 }
 
-.site-header p {
+.header-title p {
     font-size: 1.2rem;
     color: #555;
 }
+
 
 /* Footer Section */
 
