@@ -1,15 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&family=Courgette&family=Roboto:wght@100;300;400&family=Montserrat:wght@300;400;500;600&display=swap');
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: none;
-    scroll-behavior: smooth;
-
+body {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-areas: "header header"
+    "sidebar main"
+    "sidebar footer";
 }
 
+
+
 /* Header Section */
+
+header {
+    grid-area: header;
+}
 
 .site-header {
     font-family: 'Comfortaa', sans-serif;
@@ -36,13 +41,21 @@
     color: #555;
 }
 
+/* Sidebar and Navigation */
+
+aside {
+    grid-area: sidebar;
+}
 .sidebar {
-    width: 300px;
+    /*width: 300px; */
     background-color: #f8f8f8;
     padding: 1rem;
     height: 100vh;
     top: 0;
-    left: 0;;
+    left: 0;
+    position: relative;
+    border-box: black 2px;
+
 }
 
 .sidebar li {
@@ -53,18 +66,29 @@
     color: #555;
 }
 
+/* Main Information Display Section */
+.main {
+    grid-area: main;
+}
+
 
 /* Footer Section */
 
-.site-footer {
-    min-height: 8rem;
+footer {
+    grid-area: footer;
 }
 
-.site-footer p{
+.site-footer {
+    max-height: 300vh;
+}
+
+.site-footer p {
     font-family: 'Comfortaa', sans-serif;
     font-size: .8rem;
-    padding: .25rem;
+    padding: 10px;
     text-align: center;
     background-color: #f8f8f8;
     color: #555;
+    border: solid 2px black;
+
 }
