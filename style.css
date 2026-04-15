@@ -1,8 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&family=Courgette&family=Roboto:wght@100;300;400&family=Montserrat:wght@300;400;500;600&display=swap');
 
+*{
+    padding: 0;
+    margin: 0;
+}
+
 body {
+    min-height: 100vh;
     display: grid;
     grid-template-columns: 300px 1fr;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas: "header header"
     "sidebar main"
     "sidebar footer";
@@ -18,7 +25,7 @@ header {
 
 .site-header {
     font-family: 'Comfortaa', sans-serif;
-    padding: 0.5rem;
+    padding: 1rem;
     margin: 0;
     text-align: left;
     background-color: #f8f8f8;
@@ -74,6 +81,34 @@ aside {
 }
 
 
+/* Dashboard Cards */
+.card-wrapper {
+    border: solid 3px aquamarine;
+    border-radius: 10px;
+    width: 200px;
+    height: 150px;
+    padding: 1rem;
+}
+
+.card-title {
+    font-family: "Comfortaa", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.card-body {
+    font-family: "Comfortaa", sans-serif;
+    text-align: left;
+    padding: 1rem;
+}
+
+
+
+
+
+
+
+
 /* Footer Section */
 
 footer {
@@ -81,13 +116,13 @@ footer {
 }
 
 .site-footer {
-    max-height: 300vh;
+    padding: 2rem;
 }
 
 .site-footer p {
     font-family: 'Comfortaa', sans-serif;
-    font-size: .8rem;
-    padding: 10px;
+    font-size: 1rem;
+    padding: 1rem;
     text-align: center;
     background-color: #f8f8f8;
     color: #555;
