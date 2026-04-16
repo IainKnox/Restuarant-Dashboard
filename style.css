@@ -82,24 +82,45 @@ aside {
 
 
 /* Dashboard Cards */
-.card-wrapper {
+
+.card-container {
+    display: flex;
+    gap:20px;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+/* This is the main card template */
+.card-wrapper {                 
     border: solid 3px aquamarine;
     border-radius: 10px;
     width: 200px;
     height: 150px;
     padding: 1rem;
+    overflow: hidden;
 }
 
 .card-title {
+    text-align: center;
+    padding: 20px;
+    background-color: coral;
+    color: white;
+}
+
+.card-title h2 {
     font-family: "Comfortaa", sans-serif;
     text-transform: uppercase;
-    text-align: center;
+    font-size: 1.5rem;
 }
 
 .card-body {
-    font-family: "Comfortaa", sans-serif;
-    text-align: left;
     padding: 1rem;
+    
+}
+
+.card-body p {
+    font-family: "Comfortaa", sans-serif;
+    line-height: 1.6;
+    text-align: center;
 }
 
 
