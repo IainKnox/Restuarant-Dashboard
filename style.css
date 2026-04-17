@@ -80,6 +80,15 @@ aside {
     grid-area: main;
 }
 
+.main h2, p {
+    font-family: "Comfortaa", sans-serif;
+    padding: 20px;
+}
+
+.main h2 {
+    text-transform: uppercase;
+}
+
 
 /* Dashboard Cards */
 
@@ -106,10 +115,10 @@ aside {
     color: white;
 }
 
-.card-title h2 {
+.card-title h3 {
     font-family: "Comfortaa", sans-serif;
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 .card-body {
