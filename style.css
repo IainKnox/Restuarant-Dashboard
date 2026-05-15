@@ -23,30 +23,49 @@ header {
     grid-area: header;
 }
 
+
 .site-header {
     font-family: 'Comfortaa', sans-serif;
     padding: 1rem;
     margin: 0;
-    text-align: left;
+    text-align: center;
     background-color: #f8f8f8;
     max-height: 200px;
     max-width: auto;
+    /* border: solid 5px #000; */
 }
 
 .header-icon {
     color: #555;
-    font-size: 2rem;
+    font-size: 4rem;
+    padding: 5px;
+    margin: 0;
+    /* border:  solid 5px #000; */
 }
 
 .header-title {
-    font-size: 1.5rem;
+    font-size: 3rem;
+    text-transform: uppercase;
     color: black;
+    /* border: solid 1px #000; */
+    display: inline-block;
+    margin: 0;
+    padding: 0;
 }
 
-.header-title p {
+.site-header p {
     font-size: 1.2rem;
     color: #555;
+    /* border: #000 solid 10px; */
 }
+.tag-line {
+    font-size: 1.5rem;
+    text-align: center;
+    /* border: #000 solid 5px; */
+    
+}
+
+
 
 /* Sidebar and Navigation */
 
@@ -109,7 +128,7 @@ aside {
 
 .card-title {
     text-align: center;
-    justify-items: center;
+    justify-items: center; /* need to figure out how to justify the content properly */
     height: 50px;
     padding: 20px;
     background-color: coral;
