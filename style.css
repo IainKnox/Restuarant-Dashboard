@@ -28,7 +28,7 @@ header {
     font-family: 'Comfortaa', sans-serif;
     padding: 1rem;
     margin: 0;
-    text-align: center;
+    text-align: left;
     background-color: #f8f8f8;
     max-height: 200px;
     max-width: auto;
@@ -60,7 +60,7 @@ header {
 }
 .tag-line {
     font-size: 1.5rem;
-    text-align: center;
+    text-align: centerleft;
     /* border: #000 solid 5px; */
     
 }
@@ -121,7 +121,7 @@ aside {
 .card-wrapper {                 
     border: solid 3px aquamarine;
     border-radius: 10px;
-    width: 250px;
+    width: 300px;
     height: 180px;
     padding: 0;
 }
@@ -137,8 +137,14 @@ aside {
 
 .card-title h3 {
     font-family: "Comfortaa", sans-serif;
-    text-transform: uppercase;
-    font-size: 1.25rem;
+    text-transform:capitalize;
+    text-align: left;
+    font-size: 1.15rem;
+}
+
+.card-title span {
+    justify-self: right;
+    font-size: 2rem;
 }
 
 .card-body {
@@ -149,7 +155,7 @@ aside {
 .card-body p {
     font-family: "Comfortaa", sans-serif;
     line-height: 1.6;
-    text-align: center;
+    text-align: left;
     padding: 15px;
 }
 

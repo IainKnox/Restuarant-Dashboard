@@ -19,20 +19,32 @@
         
         <h1 class=" header-title"><i class="fa-solid fa-utensils header-icon""></i> Restuarant Dashboard</h1>
         <p class="tag-line">Operations Management</p>
-        <p>Logged in as:</p>
+        <form action="">
+<label for="user">Logged in as:</label>
+  <select name="user" id="user">
+    <option value="Select">Select User</option>
+    <option value="Manager">Manager</option>
+    <option value="Supervisor">Supervisor</option>
+    <option value="Chef">Chef</option>
+  </select>
+
+        </form>
     </div>
+    <hr>
   </header>
   <aside class="sidebar">
     <nav>
       <ul>
         <li><a href="index.html"> <i class="fa-solid fa-utensils"></i> Dashboard</a></li>
-        <li><a href="checklists.html">Checklists</a></li>
-        <li><a href="">Stock Control</a></li>
-        <li><a href="">Orders</a></li>
-        <li><a href="">Time & Attendance</a></li>
-        <li><a href="">Reports</a></li>
+        <li><a href="checklists.html"><i class="fa-solid fa-clipboard-question"></i> Checklists</a></li>
+        <li><a href=""><i class="fa-solid fa-dolly"></i>
+ Stock Control</a></li>
+        <li><a href=""><i class="fa-solid fa-cart-plus"></i> Orders</a></li>
+        <li><a href=""><i class="fa-solid fa-clock"></i> Time & Attendance</a></li>
+        <li><a href=""><i class="fa-regular fa-file-lines"></i> Reports</a></li>
       </ul>
     </nav>
+  
   </aside>
   <main class="main">
     <p>Please select a user from the dropdown to enable acountability tracking</p>
@@ -41,7 +53,7 @@
     <div class="card-container">
       <div class="card-wrapper">
         <div class="card-title">
-          <h3>Daily Checklists</h3>
+          <h3>Daily Checklists <span><i class="fa-solid fa-clipboard-question"></i></span></h3>
         </div>
         <div class="card-body">
           <p>0 of 5 completed</p>
@@ -49,7 +61,7 @@
       </div>
       <div class="card-wrapper">
         <div class="card-title">
-          <h3>Maintenance Issues</h3>
+          <h3>Maintenance Issues <i class="fa-solid fa-triangle-exclamation"></i></h3>
         </div>
         <div class="card-body">
           <p>0 of 5 completed</p>
@@ -57,7 +69,7 @@
       </div>
       <div class="card-wrapper">
         <div class="card-title">
-          <h3>Low Stock Items</h3>
+          <h3>Low Stock Items <i class="fa-solid fa-cart-plus"></i></h3>
         </div>
         <div class="card-body">
           <p>0 items need reordering</p>
