@@ -15,7 +15,9 @@ body {
     "sidebar footer";
 }
 
-
+:root {
+    --spacing: .25rem;
+}
 
 /* Header Section */
 
@@ -94,6 +96,16 @@ aside {
     color: #555;
 }
 
+a {
+    padding-block: calc(var(--spacing) * 3);
+    padding-inline: calc(var(--spacing) * 4);
+    line-height: 3rem;
+}
+
+a:hover {
+    background-color: #555;
+}
+
 /* Main Information Display Section */
 .main {
     grid-area: main;
@@ -108,6 +120,13 @@ aside {
     text-transform: uppercase;
 }
 
+.banner {
+    border-radius: 10px;
+    background-color: yellowgreen;
+    color: #555;
+    margin: 1rem;
+}
+
 
 /* Dashboard Cards */
 
@@ -120,19 +139,19 @@ aside {
 /* This is the main card template */
 .card-wrapper {                 
     border: solid 3px aquamarine;
-    border-radius: 10px;
-    width: 300px;
-    height: 180px;
-    padding: 0;
+    border-radius: 20px;
+    width: 400px;
+    height: 200px;
+    padding: 0.5rem;
 }
 
 .card-title {
-    text-align: center;
-    justify-items: center; /* need to figure out how to justify the content properly */
+    /* text-align: center; */
+    /* justify-items: center; need to figure out how to justify the content properly */
     height: 50px;
     padding: 20px;
-    background-color: coral;
-    color: white;
+    background-color: #fff;
+    color: #555;
 }
 
 .card-title h3 {
@@ -142,10 +161,10 @@ aside {
     font-size: 1.15rem;
 }
 
-.card-title span {
+/* .card-title span {
     justify-self: right;
-    font-size: 2rem;
-}
+    font-size: 1rem;
+} */
 
 .card-body {
     padding: 1rem;
@@ -154,9 +173,19 @@ aside {
 
 .card-body p {
     font-family: "Comfortaa", sans-serif;
-    line-height: 1.6;
+    line-height: .5;
     text-align: left;
     padding: 15px;
+}
+
+.count {
+    font-size: 2rem;
+    font-weight: bold;
+}
+/* icon placement in card */
+.icon {
+    padding-left: 120px;
+    font-size: 1rem;
 }
 
 
@@ -184,5 +213,6 @@ footer {
     background-color: #f8f8f8;
     color: #555;
     border: solid 2px black;
+    border-radius: 10px;
 
 }
