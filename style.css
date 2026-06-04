@@ -83,7 +83,6 @@ aside {
 .sidebar {
     /*width: 300px; */
     background-color: aquamarine;
-    padding: 1rem;
     margin: 1rem 0;
 
 }
@@ -91,19 +90,27 @@ aside {
 .sidebar li {
     font-size: 1.2rem;
     list-style: none;
-    padding: 0.5rem 0;
+    padding: 0;
+    margin: 0;
     font-family: 'Comfortaa', sans-serif;
     color: #555;
 }
 
-a {
+.sidebar li a {
+    display: block;
     padding-block: calc(var(--spacing) * 3);
     padding-inline: calc(var(--spacing) * 4);
     line-height: 3rem;
 }
 
-a:hover {
+.sidebar li a:hover {
+    background-color: #fa55;
+    color:#555;
+}
+
+.sidebar li a.active {
     background-color: #555;
+    color: #f8f8f8;
 }
 
 /* Main Information Display Section */
@@ -216,3 +223,19 @@ footer {
     border-radius: 10px;
 
 }
+
+/* Media Queries for responsivness */
+
+/* @media screen and (max-width: 900px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar li a {
+        float: left;
+        padding: 15px;
+    }
+    
+} */
