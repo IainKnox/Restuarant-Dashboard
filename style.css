@@ -17,6 +17,10 @@ body {
 
 :root {
     --spacing: .25rem;
+    --darkfont: #482728;
+    --lightfont: #F5F5F5;
+    --darkbackground: #BDCFB5;
+    --lightbackground: #DAFBE4;
 }
 
 /* Header Section */
@@ -31,14 +35,14 @@ header {
     padding: 1rem;
     margin: 0;
     text-align: left;
-    background-color: #f8f8f8;
+    background-color: var(--lightbackground);
     max-height: 200px;
     max-width: auto;
     /* border: solid 5px #000; */
 }
 
 .header-icon {
-    color: #555;
+    color: var(--darkfont);
     font-size: 4rem;
     padding: 5px;
     margin: 0;
@@ -57,7 +61,7 @@ header {
 
 .site-header p {
     font-size: 1.2rem;
-    color: #555;
+    color: var(--darkfont);
     /* border: #000 solid 10px; */
 }
 .tag-line {
@@ -77,23 +81,24 @@ aside {
 
 .sidebar a {
     text-decoration: none;
-    color: grey;
+    color: var(--darkfont);
+    border-radius: 20px;
 }
 
 .sidebar {
     /*width: 300px; */
-    background-color: aquamarine;
-    margin: 1rem 0;
+    background-color: var(--lightbackground);
+    margin: 0;
 
 }
 
 .sidebar li {
     font-size: 1.2rem;
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: .25rem;
+    margin: .5rem;
     font-family: 'Comfortaa', sans-serif;
-    color: #555;
+    color: var(--darkfont);
 }
 
 .sidebar li a {
@@ -104,13 +109,13 @@ aside {
 }
 
 .sidebar li a:hover {
-    background-color: #fa55;
-    color:#555;
+    background-color: var(--darkbackground);
+    color:var(--lightfont);
 }
 
 .sidebar li a.active {
-    background-color: #555;
-    color: #f8f8f8;
+    background-color: var(--darkbackground);
+    color: var(--darkfont);
 }
 
 /* Main Information Display Section */
@@ -195,7 +200,49 @@ aside {
     font-size: 1rem;
 }
 
+.alert-cards {
+    width: 840px;
+}
 
+
+/** Checklist Page **/
+
+.checks-banner {
+    width: 100%;
+    background-color: var(--darkbackground);
+    color: var(--lightfont);
+    border-radius: 25px;
+}
+.checks li {
+    font-size: 1.2rem;
+    list-style: none;
+    /* padding: .25rem;  removed as it creates unnecceary space around the slider bar */
+    /* margin: .5rem; */
+    font-family: 'Comfortaa', sans-serif;
+    color: var(--darkfont);
+    display: inline;
+    width: 50px;
+    text-align: center;
+}
+
+.checks li a {
+    text-decoration: none;
+    color: var(--darkfont);
+    border-radius: 20px;
+    /* display: block; */
+    padding-block: calc(var(--spacing) * 3);
+    padding-inline: calc(var(--spacing) * 4);
+    line-height: 3rem;
+}
+
+.checks li a:hover {
+    background-color: var(--lightbackground);
+    color:var(--darkfont);
+}
+
+.checks li a.active {
+    background-color: var(--darkbackground);
+    color: var(--darkfont);
 
 
 
@@ -226,7 +273,23 @@ footer {
 
 /* Media Queries for responsivness */
 
+/* 900px screen width */
 /* @media screen and (max-width: 900px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar li a {
+        float: left;
+        padding: 15px;
+    }
+    
+} */
+
+/* 400pxx screen width */
+/* @media screen and (max-width: 400px) {
     .sidebar {
         width: 100%;
         height: auto;
