@@ -60,15 +60,16 @@ header {
 }
 
 .site-header p {
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
     color: var(--darkfont);
     /* border: #000 solid 10px; */
 }
 .tag-line {
-    font-size: 1.5rem;
-    text-align: centerleft;
-    /* border: #000 solid 5px; */
-    
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: left;
+    /* text-align: centerleft; */
+    /* border: #000 solid 5px; */   
 }
 
 
@@ -245,9 +246,14 @@ aside {
     color: var(--darkfont); */
 
 .tabs-section {
-    max-width: 1500px; /* controls the width of the tab navigation */
+    /* max-width: 1500px; controls the width of the tab navigation
     width: 100%;
-    min-height: 300px;
+    min-height: 300px; */
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 25px;;
     font-size: 1.2rem;
     font-family: 'Comfortaa', sans-serif;
 }
@@ -256,14 +262,31 @@ aside {
     display: none;}
 
 
-.tabs-section label {
-    padding: 10px 45px;
+.tabs-section .tab-label {
+    padding: 25px;
+    margin: 0 auto;
+    border: 2px solid #555;
     border-radius: 5px;
     cursor: pointer;
     transition: .4s;
 }
 
-.tab-content h3 {
+.tabs-section .tab-content {
+    width: 100%;
+    padding: 20px;
+    order: 1;
+    display: none;
+}
+
+.tabs-section input[type="radio"]:checked + .tab-label + .tab-content {
+    display: block;
+}
+
+
+
+
+
+/* .tab-content h3 {
     margin:auto 0;
     padding: 30px 30px 0;
 }
@@ -271,7 +294,7 @@ aside {
 .tab-content #content1, #content2, #content3 {
     display: block;
     line-height: 3rem;
-}
+} */
 
 .tab-check {
     line-height: 2rem;

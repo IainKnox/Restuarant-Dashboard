@@ -54,7 +54,7 @@
     <!-- this is going to require JavaScript at a later stage, 
       so this iteration will use html and css only until then. -->
     <h2>Checklists & Logs</h2>
-    <p>Manage cleaning tasks, temperature checks and maintainance.</p>
+    <p class="tag-line">Manage cleaning tasks, temperature checks and maintainance.</p>
     <!-- <div class="checks-banner">
     <ul class="checks">
       <li><a>Daily</a></li>
@@ -67,180 +67,177 @@
     </ul></div> -->
 
     <!-- Html and CSS only solution for Tabs-->
-    <section class="tabs-section">
+    <div class="tabs-section">
+      <!-- Tabs Content-->
       <input type="radio" name="tabs" id="tab-daily" checked>
-      <label for="tab-daily">Daily</label>
+      <label class="tab-label" for="tab-daily">Daily</label>
+      <div class="tab-content" id="content1">
+        <h3>Daily Cleaning tasks</h3>
+        <p>Complete these tasks every day</p>
+        <div class="tab-check">
+          <input type="checkbox" name="daily-tasks" id="checks-daily1">
+          <label for="checks-daily1">Clean all preparation surfaces</label>
+        </div>
+        <div class="tab-check">
+          <input type="checkbox" name="daily-tasks" id="checks-daily2">
+          <label for="checks-daily2">Check handwash stations stocked</label>
+        </div>
+        <div class="tab-check">
+          <input type="checkbox" name="daily-tasks" id="checks-daily3">
+          <label for="checks-daily3">Clean and sanitize cutting boards</label>
+        </div>
+        <div class="tab-check">
+          <input type="checkbox" name="daily-tasks" id="checks-daily4">
+          <label for="checks-daily4">Empty and clean grease traps</label>
+        </div>
+        <div class="tab-check">
+          <input type="checkbox" name="daily-tasks" id="checks-daily5">
+          <label for="checks-daily4">Sweep and mop floors</label>
+        </div>
+      </div>
 
       <input type="radio" name="tabs" id="tab-weekly">
-      <label for="tab-weekly">Weekly</label>
+      <label class="tab-label" for="tab-weekly">Weekly</label>
+      <div class="tab-content" id="content2">
+        <h3>Weekly Cleaning tasks</h3>
+        <p>Complete these tasks every week</p>
+        <div class="tab-check">
+          <input type="checkbox" name="weekly-tasks" id="checks-weekly1">
+          <label for="checks-weekly1">Deep clean ovens and grills</label>
+        </div>
+
+        <div class="tab-check">
+          <input type="checkbox" name="weekly-tasks" id="checks-weekly2">
+          <label for="checks-weekly2">Deep clean all fridges and freezers</label>
+        </div>
+        <div class="tab-check">
+          <input type="checkbox" name="weekly-tasks" id="checks-weekly3">
+          <label for="checks-weekly3">Defrost and clean blast chiller unit</label>
+        </div>
+        <div class="tab-check">
+          <input type="checkbox" name="weekly-tasks" id="checks-weekly4">
+          <label for="checks-weekly4">Deep clean and sanitize the backline and grill hood</label>
+        </div>
+        <div class="tab-check">
+          <input type="checkbox" name="weekly-tasks" id="checks-weekly5">
+          <label for="checks-weekly5">Check and rotate dry store stocks FIFO</label>
+        </div>
+      </div>
 
       <input type="radio" name="tabs" id="tab-monthly">
-      <label for="tab-monthly">Monthly</label>
+      <label class="tab-label" for="tab-monthly">Monthly</label>
+      <div class="tab-content" id="content3">
+        <h3>Monthly Cleaning tasks</h3>
+        <p>Complete these tasks every month</p>
+        <div class="tab-check">
+          <input type="checkbox" name="monthly-tasks" id="checks-monthly1">
+          <label for="checks-monthly1">Service all fridge and freezer fans and filters</label>
+        </div>
+        <div class="tab-check">
+          <input type="checkbox" name="monthly-tasks" id="checks-monthly2">
+          <label for="checks-monthly2">Pest control inspection</label>
+        </div>
+        <div class="tab-check">
+          <input type="checkbox" name="monthly-tasks" id="checks-monthly3">
+          <label for="checks-monthly3">Fire supression system check</label>
+        </div>
+        <div class="tab-check">
+          <input type="checkbox" name="monthly-tasks" id="checks-monthly4">
+          <label for="checks-monthly4">Service ventilation system</label>
+        </div>
+        <div class="tab-check">
+          <input type="checkbox" name="monthly-tasks" id="checks-monthly5">
+          <label for="checks-monthly5">Review and update HACCP plans</label>
+        </div>
+      </div>
 
       <input type="radio" name="tabs" id="tab-temps">
-      <label for="tab-temps">Temps</label>
+      <label class="tab-label" for="tab-temps">Temps</label>
+      <div class="tab-content" id="content4">
+        <h3>Fridge & Freezer Temperatures</h3>
+        <p>Record fridge and freezer temperature</p>
+        <!-- this will need to be a range selection -->
+        <div>
+          <label for="location1">Location</label>
+          <input type="text" name="location1" id="location1" placeholder="eg..Fridge 1">
+        </div>
+        <div>
+          <label for="temp1">Temperature</label>
+          <input type="number" name="temp1" id="temp1" min="0.0" max="8.0" step="0.1" placeholder="eg..3.5" required>
+        </div>
+        <div>
+          <label for="action1">Actions Taken (optional)</label>
+          <textarea name="action1" id="action1" cols="33" rows="5" placeholder="Any additional notes..."></textarea>
+        </div>
+        <div>
+          <button type="submit"">Record Temperature</button></div>
+        </div>
 
-      <input type="radio" name="tabs" id="tab-delivery">
-      <label for="tab-delivery">Delivery</label>
+        <input type="radio" name="tabs" id="tab-delivery">
+        <label class="tab-label" for="tab-delivery">Deliveries</label>
+            <div class=" tab-content" id="content5">
+              <h3>Delivery Logs</h3>
+              <p>Record inccoming deliveries and goods received</p>
+              <!-- this will need to be a form -->
+              <label for="supplier">Supplier</label>
+              <input type="text" name="supplier" id="supplier" placeholder="eg..Supplier Name">
+              <br>
+              <label for="goods">Item Received</label>
+              <input type="text" name="goods" id="goods" placeholder="eg..Chicken Breast, Eggs">
+              <br>
+              <label for="delivery-temp">Delivery Temperature</label>
+              <input type="number" step="0.5" min="-16" max="10" name="delivery-temp" id="delivery-temp"
+                placeholder="eg..3.2">
+              <label for="delivery-note">Notes (optional)</label>
+              <textarea name="delivery-note" id="delivery-note" cols="33" rows="5"
+                placeholder="Any additional notes..."></textarea>
+              <br>
+              <button type="submit"">Log Delivery</button>
+        </div>
 
-      <input type="radio" name="tabs" id="tab-probe">
-      <label for="tab-probe">Probe</label>
+                <input type="radio" name="tabs" id="tab-probes">
+                <label class="tab-label" for="tab-probes">Probes</label>
+                <div class=" tab-content" id="content6">
+                  <h3>Probe Calibration</h3>
+                  <p>Calibrate temperature probes in ice water and boiling water</p>
+                  <!-- this will need to be a form -->
+                  <label for="probeid">Probe ID</label>
+                  <input name="probeid" type="text" placeholder="eg..ProbeA1001">
+                  <br>
+                  <label for="boiling">Boiling water Calibration (acceptable range 99 to 101):</label>
+                  <input type="number" step="0.5" id="boiling" name="boiling" min="90" max="110" placeholder="eg..96">
+                  <label for="ice">Ice water Calibration (acceptable range -1 to 1):</label>
+                  <input type="number" step="0.5" id="ice" name="ice" min="-10" max="10" placeholder="eg..-1">
+                  <br>
+                  <button type="submit">Record Calibration</button>
+                </div>
 
-      <input type="radio" name="tabs" id="tab-maintenance">
-      <label for="tab-maintenance">Maintenance</label>
+                <input type="radio" name="tabs" id="tab-maintenance">
+                <label class="tab-label" for="tab-maintenance">Maintenance</label>
+                <div class="tab-content" id="content7">
+                  <h3>Maintenance Issues</h3>
+                  <p>Report and track all equipment and maintenance issues</p>
+                  <!-- this will need to be a form -->
+                  <form action="POST" method="get">
+                    <label for="equipment">Equipment</label>
+                    <input type="text" placeholder="eg..Oven, Fryer"> <!-- required fieldset-->
+                    <br>
+                    <label for="priority">Priority</label>
+                    <select name="priority" id="priority">
+                      <option value="low">Low</option>
+                      <option value="medium">Medium</option>
+                      <option value="high">High</option>
+                    </select>
+                    <br>
+                    <label for="description">Issue Description</label>
+                    <textarea name="description" id="description" rows="5"
+                      cols="33">Please enter a description of the issue</textarea>
+                    <br>
+                    <button type="submit">Report Issue</button>
+                  </form>
+                </div>
 
-      <!-- Tabs Content-->
-      <section>
-        <div class="tab-content" id="content1">
-          <h3>Daily Cleaning tasks</h3>
-          <p>Complete these tasks every day</p>
-          <div class="tab-check">
-            <input type="checkbox" name="daily-tasks" id="checks-daily1">
-            <label for="checks-daily1">Clean all preparation surfaces</label>
-          </div>
-          <div class="tab-check">
-            <input type="checkbox" name="daily-tasks" id="checks-daily2">
-            <label for="checks-daily2">Check handwash stations stocked</label>
-          </div>
-          <div class="tab-check">
-            <input type="checkbox" name="daily-tasks" id="checks-daily3">
-            <label for="checks-daily3">Clean and sanitize cutting boards</label>
-          </div>
-          <div class="tab-check">
-            <input type="checkbox" name="daily-tasks" id="checks-daily4">
-            <label for="checks-daily4">Empty and clean grease traps</label>
-          </div>
-          <div class="tab-check">
-            <input type="checkbox" name="daily-tasks" id="checks-daily5">
-            <label for="checks-daily4">Sweep and mop floors</label>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div class="tab-content" id="content2">
-          <h3>Weekly Cleaning tasks</h3>
-          <p>Complete these tasks every week</p>
-          <div class="tab-check">
-            <input type="checkbox" name="weekly-tasks" id="checks-weekly1">
-            <label for="checks-weekly1">Deep clean ovens and grills</label>
-          </div>
-          <div class="tab-check">
-            <input type="checkbox" name="weekly-tasks" id="checks-weekly2">
-            <label for="checks-weekly2">Deep clean all fridges and freezers</label>
-          </div>
-          <div class="tab-check">
-            <input type="checkbox" name="weekly-tasks" id="checks-weekly3">
-            <label for="checks-weekly3">Defrost and clean blast chiller unit</label>
-          </div>
-          <div class="tab-check">
-            <input type="checkbox" name="weekly-tasks" id="checks-weekly4">
-            <label for="checks-weekly4">Deep clean and sanitize the backline and grill hood</label>
-          </div>
-          <div class="tab-check">
-            <input type="checkbox" name="weekly-tasks" id="checks-weekly5">
-            <label for="checks-weekly5">Check and rotate dry store stocks FIFO</label>
-          </div>
-      </section>
-      <section>
-        </div>
-        <div class="tab-content" id="content3">
-          <h3>Monthly Cleaning tasks</h3>
-          <p>Complete these tasks every month</p>
-          <div class="tab-check">
-            <input type="checkbox" name="monthly-tasks" id="checks-monthly1">
-            <label for="checks-monthly1">Service all fridge and freezer fans and filters</label>
-          </div>
-          <div class="tab-check">
-            <input type="checkbox" name="monthly-tasks" id="checks-monthly2">
-            <label for="checks-monthly2">Pest control inspection</label>
-          </div>
-          <div class="tab-check">
-            <input type="checkbox" name="monthly-tasks" id="checks-monthly3">
-            <label for="checks-monthly3">Fire supression system check</label>
-          </div>
-          <div class="tab-check">
-            <input type="checkbox" name="monthly-tasks" id="checks-monthly4">
-            <label for="checks-monthly4">Service ventilation system</label>
-          </div>
-          <div class="tab-check">
-            <input type="checkbox" name="monthly-tasks" id="checks-monthly5">
-            <label for="checks-monthly5">Review and update HACCP plans</label>
-          </div>
-      </section>
-      <section>
-        </div>
-        <div class="tab-content" id="content4">
-          <h3>Fridge & Freezer Temperatures</h3>
-          <p>Record fridge and freezer temperature</p>
-          <!-- this will need to be a range selection -->
-          <input type="checkbox" name="weekly-tasks" id="checks-weekly1">
-          <label for="checks-weekly1">Deep clean ovens and grills</label>
-          <input type="checkbox" name="weekly-tasks" id="checks-weekly2">
-          <label for="checks-weekly2">Deep clean all fridges and freezers</label>
-          <input type="checkbox" name="weekly-tasks" id="checks-weekly3">
-          <label for="checks-weekly3">Defrost and clean blast chiller unit</label>
-          <input type="checkbox" name="weekly-tasks" id="checks-weekly4">
-          <label for="checks-weekly4">Deep clean and sanitize the backline and grill hood</label>
-          <input type="checkbox" name="weekly-tasks" id="checks-weekly5">
-          <label for="checks-weekly5">Check and rotate dry store stocks FIFO</label>
-        </div>
-      </section>
-      <section>
-        <div class="tab-content" id="content5">
-          <h3>Delivery Logs</h3>
-          <p>Record inccoming deliveries and goods received</p>
-          <!-- this will need to be a form -->
-          <input type="checkbox" name="weekly-tasks" id="checks-weekly1">
-          <label for="checks-weekly1">Deep clean ovens and grills</label>
-          <input type="checkbox" name="weekly-tasks" id="checks-weekly2">
-          <label for="checks-weekly2">Deep clean all fridges and freezers</label>
-          <input type="checkbox" name="weekly-tasks" id="checks-weekly3">
-          <label for="checks-weekly3">Defrost and clean blast chiller unit</label>
-          <input type="checkbox" name="weekly-tasks" id="checks-weekly4">
-          <label for="checks-weekly4">Deep clean and sanitize the backline and grill hood</label>
-          <input type="checkbox" name="weekly-tasks" id="checks-weekly5">
-          <label for="checks-weekly5">Check and rotate dry store stocks FIFO</label>
-        </div>
-      </section>
-      <section>
-        <div class="tab-content" id="content6">
-          <h3>Probe Calibration</h3>
-          <p>Calibrate temperature probes in ice water and boiling water</p>
-          <!-- this will need to be a form -->
-          <label for="probeid">Probe ID</label>
-          <input name="probeid" type="text" placeholder="eg..ProbeA1001">
-          <br>
-          <label for="boiling">Boiling water Calibration (acceptable range 99 to 101):</label>
-          <input type="range" id="boiling" name="boiling" min="90" max="110">
-          <label for="ice">Ice water Calibration (acceptable range -1 to 1):</label>
-          <input type="range" id="ice" name="ice" min="-10" max="10">
-
-        </div>
-      </section>
-      <section>
-        <div class="tab-content" id="content7">
-          <h3>Maintenance Issues</h3>
-          <p>Report and track all equipment and maintenance issues</p>
-          <!-- this will need to be a form -->
-          <form action="POST" method="get">
-            <label for="equipment">Equipment</label>
-            <input type="text" placeholder="eg..Oven, Fryer"> <!-- required fieldset-->
-            <br>
-            <label for="priority">Priority</label>
-            <select name="priority" id="priority">
-              <option value="low">Low</option>
-              <option value="medium">Medium</option>
-              <option value="high">High</option>
-            </select>
-            <br>
-            <label for="description">Issue Description</label>
-            <textarea name="description" id="description" rows="5"
-              cols="33">Please enter a description of the issue</textarea>
-            <br>
-            <button type="submit">Submit</button>
-          </form>
-        </div>
-      </section>
+            </div>
 
   </main>
 
