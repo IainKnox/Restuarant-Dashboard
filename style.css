@@ -265,10 +265,15 @@ aside {
 .tabs-section .tab-label {
     padding: 25px;
     margin: 0 auto;
-    border: 2px solid #555;
-    border-radius: 5px;
+    border: 2px solid #BDCFB5;
+    border-radius: 15px;
     cursor: pointer;
     transition: .4s;
+}
+
+.tabs-section .tab-label:hover {
+    color: var(--darkfont);
+    background-color: var(--darkbackground);
 }
 
 .tabs-section .tab-content {
@@ -280,6 +285,16 @@ aside {
 
 .tabs-section input[type="radio"]:checked + .tab-label + .tab-content {
     display: block;
+}
+
+.tabs-section input[type="radio"]:checked + .tab-label {
+    background: var(--lightbackground);
+}
+
+.tab-content {
+    border: 2px solid #BDCFB5;
+    border-radius: 20px;
+    margin-top: 20px;
 }
 
 
